@@ -9,25 +9,38 @@
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    @Html.Label("Tìm kiếm theo tên: ")
+    @Html.TextBox("ten");
+    <input type="submit" value="Tìm" />
+}
+<br />
+@using (Html.BeginForm())
+{
+    @Html.Label("Tìm kiếm theo giá: ")
+    @Html.TextBox("gia");
+    <input type="submit" value="Tìm" />
+}
 <table class="table">
     <tr>
         <th>
             Danh mục
         </th>
         <th>
-            Tên sản phẩm 
+            Tên sản phẩm
         </th>
         <th>
             Mô tả
         </th>
         <th>
-            Giá nhập 
+            Giá nhập
         </th>
         <th>
             Giá bán
         </th>
         <th>
-            Số lượng 
+            Số lượng
         </th>
         <th>
             Loại nho
@@ -36,49 +49,50 @@
             Hình ảnh
         </th>
         <th>
-            Khu vực 
+            Khu vực
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Catalogy.CatalogyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PurchasePrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Vintage)
-        </td>
-        <td>
-            @{ 
-                string path = "~/Images/" + item.Image;
-            }
-            <img src="@Url.Content(path)" width="150" alt="Anh" class="img-thumbnail"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Region)
-        </td>
-        <td>
-            @Html.ActionLink("Sửa", "Edit", new { id=item.ProductID }) |
-            @Html.ActionLink("Chi tiết", "Details", new { id=item.ProductID }) |
-            @Html.ActionLink("Xóa", "Delete", new { id=item.ProductID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Catalogy.CatalogyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchasePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vintage)
+            </td>
+            <td>
+                @{
+                    string path = "~/Images/" + item.Image;
+                }
+                <img src="@Url.Content(path)" width="150" alt="Anh" class="img-thumbnail" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ProductID })
+            </td>
+        </tr>
+    }
 
 </table>

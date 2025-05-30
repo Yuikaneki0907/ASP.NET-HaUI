@@ -15,9 +15,21 @@ namespace ASP_tx2_git.Controllers
         private SanPham db = new SanPham();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(string ten, string gia)
         {
-            var product = db.Product.Include(p => p.Catalogy);
+            var product = db.Product.Select(p=>p);
+            if (!string.IsNullOrEmpty(ten))
+            {
+                product=product.Where(p=>p.ProductName.Contains(ten));
+            }
+            if (!string.IsNullOrEmpty(gia))
+            {
+                decimal gia1 = 0;
+                if(decimal.TryParse(gia, out gia1))
+                {
+                    product = product.Where(p => p.Price > gia1);
+                }
+            }
             return View(product.ToList());
         }
 
