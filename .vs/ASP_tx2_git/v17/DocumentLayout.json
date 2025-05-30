@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|solutionrelative:asp_tx2_git\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|c:\\users\\admin\\source\\repos\\asp_tx2_git\\asp_tx2_git\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|C:\\Users\\ADMIN\\source\\repos\\ASP_tx2_git\\asp_tx2_git\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|solutionrelative:asp_tx2_git\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|c:\\users\\admin\\source\\repos\\asp_tx2_git\\asp_tx2_git\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B05E5171-B895-455D-83E0-9F6455A3E7C4}|ASP_tx2_git\\ASP_tx2_git.csproj|solutionrelative:asp_tx2_git\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ASP_tx2_git\\ASP_tx2_git\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ASP_tx2_git\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ASP_tx2_git\\ASP_tx2_git\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ASP_tx2_git\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T17:07:56.911Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -28,7 +45,7 @@
               "RelativeDocumentMoniker": "ASP_tx2_git\\Views\\Products\\Index.cshtml",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ASP_tx2_git\\ASP_tx2_git\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "ASP_tx2_git\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-30T09:26:42.471Z",
               "EditorCaption": ""
@@ -41,7 +58,7 @@
               "RelativeDocumentMoniker": "ASP_tx2_git\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ASP_tx2_git\\ASP_tx2_git\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "ASP_tx2_git\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T09:12:38.294Z",
               "EditorCaption": ""

@@ -15,9 +15,26 @@ namespace ASP_tx2_git.Controllers
         private SanPham db = new SanPham();
 
         // GET: Products
-        public ActionResult Index(string ten, string gia)
+        public ActionResult Index(string ten, string gia, string sx)
         {
             var product = db.Product.Select(p=>p);
+            ViewBag.sapxeptheoten = String.IsNullOrEmpty(sx) ? "SX" : "";
+            ViewBag.sapxeptheogia = sx == "Gia" ? "Gia-desc" : "Gia";
+            switch (sx)
+            {
+                case "SX":
+                    product = product.OrderBy(p => p.ProductName);
+                    break;
+                case "Gia":
+                    product = product.OrderBy(p => p.Price);
+                    break;
+                case "Gia-desc":
+                    product = product.OrderByDescending(p => p.Price);
+                    break;
+                default:
+                    product = product.OrderByDescending(p => p.ProductName);
+                    break;
+            }
             if (!string.IsNullOrEmpty(ten))
             {
                 product=product.Where(p=>p.ProductName.Contains(ten));
