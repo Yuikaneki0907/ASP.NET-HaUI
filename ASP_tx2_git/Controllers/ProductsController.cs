@@ -52,6 +52,14 @@ namespace ASP_tx2_git.Controllers
         {
             if (ModelState.IsValid)
             {
+                var f = Request.Files["Image"];
+                if(f!=null && f.ContentLength > 0)
+                {
+                    string tenfile = System.IO.Path.GetFileName(f.FileName);
+                    string duongdan = Server.MapPath("~/Images/" + tenfile);
+                    f.SaveAs(duongdan);
+                    product.Image = tenfile;
+                }
                 db.Product.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,10 +90,23 @@ namespace ASP_tx2_git.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,ProductName,Description,PurchasePrice,Price,Quantity,Vintage,CatalogyID,Image,Region")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,ProductName,Description,PurchasePrice,Price,Quantity,Vintage,CatalogyID,Region")] Product product)
         {
             if (ModelState.IsValid)
             {
+                var b = db.Product.AsNoTracking().SingleOrDefault(s => s.ProductID == product.ProductID);
+                var f = Request.Files["Image"];
+                if (f != null && f.ContentLength > 0)
+                {
+                    string tenfile = System.IO.Path.GetFileName(f.FileName);
+                    string duongdan = Server.MapPath("~/Images/" + tenfile);
+                    f.SaveAs(duongdan);
+                    product.Image = tenfile;
+                }
+                else
+                {
+                    product.Image = b.Image;
+                }
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
